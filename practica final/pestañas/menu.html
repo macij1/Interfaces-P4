@@ -1,33 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu</title>
-    <link rel="stylesheet" href="../style/menu.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style/menu.css" />
+    <script src="../script/menu.js"></script>
+  </head>
+  <body>
     <header>
-        <div>
-            <img id="logo" src="../imagenes/Imagen_logo2.png" alt="logo">
-        </div>
-        <div class="menu">
-            <a href="../pagina-inicio.html">
-                <p id="menu">Inicio</p>
-            </a>
-            <a href="menu.html">
-                <p id="menu">Menu</p>
-            </a>
-            <a href="reservar.html">
-                <p id="menu">Reservar</p>
-            </a>
-            <a href="historia.html">
-                <p id="menu">Sobre nosotros</p>
-            </a>
-            <a href="../pagina-inicio.html/#ubicaciones">
-                <p id="menu">Ubicaciones</p>
-            </a>
-        </div>
+      <div>
+        <img id="logo" src="../imagenes/Imagen_logo2.png" alt="logo" />
+      </div>
+      <div class="menu">
+        <a href="../pagina-inicio.html">
+          <p id="menu">Inicio</p>
+        </a>
+        <a href="menu.html">
+          <p id="menu">Menu</p>
+        </a>
+        <a href="reservar.html">
+          <p id="menu">Reservar</p>
+        </a>
+        <a href="historia.html">
+          <p id="menu">Sobre nosotros</p>
+        </a>
+        <a href="../pagina-inicio.html/#ubicaciones">
+          <p id="menu">Ubicaciones</p>
+        </a>
+      </div>
     </header>
-</body>
+    <div class="barra_superior">
+      <img
+        src="../imagenes/bolso.png"
+        width="50"
+        alt="Cesta compra"
+        id="cestaIcono"
+      />
+      <div id="cestaDesplegable" class="desplegable">
+        <div class="texto_variable">Nº de pedidos= 0</div>
+      </div>
+    </div>
+    <div class="barra_platos">
+      <p>Platos(12)</p>
+      <hr />
+    </div>
+    <div class="contenedor-productos">
+      <div class="producto">
+        <h3>Tortilla de patatas</h3>
+        <figure>
+          <img src="../images/tortilla.jpg" alt="tortilla" />
+        </figure>
+        <p>Precio: $17</p>
+        <label for="producto1-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto1-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto1"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Hamburguesa</h3>
+        <figure>
+          <img src="../images/hamburguesa.png" alt="hamburguesa" />
+        </figure>
+        <p>Precio: $15</p>
+        <label for="producto2-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto2-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto2"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Almejas a la marinera</h3>
+        <figure>
+          <img src="../images/almejas.jpg" alt="almejas" />
+        </figure>
+        <p>Precio: $18</p>
+        <label for="producto3-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto3-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto3"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Calamares a la romana</h3>
+        <figure>
+          <img src="../images/calamares.jpg" alt="calamares" />
+        </figure>
+        <p>Precio: $14</p>
+        <label for="producto4-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto4-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto4"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Pollo asado</h3>
+        <figure>
+          <img src="../images/pollo.jpg" alt="pollo asado" />
+        </figure>
+        <p>Precio: $16</p>
+        <label for="producto5-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto5-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto5"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Costillas a la miel</h3>
+        <figure>
+          <img src="../images/costillas.jpg" alt="costillas" />
+        </figure>
+        <p>Precio: $22</p>
+        <label for="producto6-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto6-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto6"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Sandwich club</h3>
+        <figure>
+          <img src="../images/sandwich.jpg" alt="Sandwich" />
+        </figure>
+        <p>Precio: $9</p>
+        <label for="producto7-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto7-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto7"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Croquetas de jamón</h3>
+        <figure>
+          <img src="../images/croqueta_jamon.jpg" alt="croquetas" />
+        </figure>
+        <p>Precio: $12</p>
+        <label for="producto8-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto8-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto8"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Lentejas con chorizo</h3>
+        <figure>
+          <img src="../images/lentejas.jpg" alt="lentejas" />
+        </figure>
+        <p>Precio: $14</p>
+        <label for="producto9-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto9-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto9"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Ensalada césar</h3>
+        <figure>
+          <img src="../images/ensalada.jpg" alt="ensalada" />
+        </figure>
+        <p>Precio: $8</p>
+        <label for="producto10-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto10-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto10"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Entrecot a la plancha</h3>
+        <figure>
+          <img src="../images/entrecote-al-punto.jpg" alt="entrecot" />
+        </figure>
+        <p>Precio: $24</p>
+        <label for="producto11-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto11-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto11"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+
+      <div class="producto">
+        <h3>Spaghetti a la carbonara</h3>
+        <figure>
+          <img src="../images/espaguetis-a-la-carbonara.jpg" alt="Spaghetti" />
+        </figure>
+        <p>Precio: $16</p>
+        <label for="producto12-cantidad">Cantidad:</label>
+        <input
+          type="number"
+          id="producto12-cantidad"
+          value="0"
+          min="0"
+          onchange="pedidos_totales(this)"
+        />
+        <button
+          class="quitar-producto"
+          data-producto="producto12"
+          onclick="restarUno(this)"
+        >
+          Quitar
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
