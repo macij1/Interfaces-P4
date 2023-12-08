@@ -56,10 +56,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
-  function ocultarFooter() {
-    document.querySelector(".footer").style.display = "none";
-    document.querySelector(".footer").style.opacity = 0;
-  }
-
-
+  

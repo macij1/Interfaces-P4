@@ -20,8 +20,6 @@ body{
 header{
     background-color: var(--color-fondo2);
     height: 120px;
-    /*position: fixed;
-    top: 0;*/
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -48,7 +46,7 @@ header{
 /*CONTENEDOR PRINCIPAL*/
 .contenedor-principal{
     text-align: center;
-    min-height: 500px;
+    height: 500px;
     top:120px;
 }
 .contenedor-principal h2{
@@ -56,33 +54,30 @@ header{
     margin-top: 80px;
     /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
 }
-.contenedor-ubicaciones{
+.contenedor-horas{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    margin: 50px 200px auto 200px;
+}
+.fila{
     display: flex;
     justify-content: space-around;
-    margin: 80px;
+    margin: 25px;
 }
-.cont:hover{
-    transform: scale(1.05, 1.05);
-}
-.cont:active{
-    opacity: 0.5;
-}
-#item-1,
-#item-2{
-    width: 300px;
-    height: 150px;
+.hora button{
+    width: 70px;
+    height: 25px;
     border-radius: 5px;
     border: 2px;
     font-size: 15px;
-    font-weight: bold;
+}
+.hora button:hover{
+    transform: scale(1.05,1.05);
+    opacity: 0.8;
+    background-image: url(../imagenes/saludable\ 1.png);
+    background-size: cover;
     color: #ffffff;
 }
-
-#item-1{
-    background-image: url(../imagenes/grupo-sushita.jpg);
-    background-size: cover;
-}
-#item-2{
-    background-image: url(../imagenes/sobre-nosotros.jpg);
-    background-size: cover;
+.hora button:active{
+    color: #000;
 }
