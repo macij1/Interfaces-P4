@@ -56,8 +56,9 @@ header{
     justify-content: center;
 }
 
-.barra_superior img {
+.barra_superior .cesta-icono {
    margin-left: 90%; 
+   cursor: pointer;
 }
  
 
@@ -93,13 +94,108 @@ header{
     position: absolute;
     top: 30%;
     right: -200px; 
-    width: 250px;
+    width: 300px;
     background-color: #fff;
     border: 1px solid #ccc;
-    padding: 10px;
-    height: 250px;
+    height: 400px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 3;
+}
+
+/* Despegable (parte superior) */
+.parte_superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0; 
+    padding: 5px 10px; 
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+}
+
+.parte_superior img{
+    margin-left: 40px;
+    cursor: pointer;
+}
+.texto_variable{
+    margin-right: 40px;
+}
+
+/* Despegable (parte inferior) */
+.parte_inferior {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0; 
+    border-top: 1px solid #ccc;
+    height: 68px; 
+    margin-bottom: 0;
+    padding: 10px;
+}
+  
+.botones {  
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.boton1{
+    cursor: pointer;
+    padding: 8px 28px;
+    border-radius: 4px;
+    margin-left: 15px;
+    border-width: 0.5px;
+}
+.boton2{
+    cursor: pointer;
+    padding: 8px 28px;
+    border-radius: 4px;
+    margin-left: 40px;
+    border-width: 0.5px;
+}
+
+.total {
+    width: 100%;
+}
+  
+/* Despegable parte central */
+.productos-cesta{
+    display: flex;
+    flex-direction: column;
+    height: 250px; 
+    margin-bottom: 0;
+    overflow-y: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* Estilos para la ficha de producto */
+.ficha-producto {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #ccc;
+    max-width: 100%;
+}
+  
+.ficha-producto .imagen {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+  
+.ficha-producto h4 {
+    margin: 10px 10px;
+}
+  
+.ficha-producto p {
+    margin: 10px  10px;
+}
+  
+.ficha-producto .cantidad {
+    align-self: flex-end;
+    margin-left: 40px;
 }
   
 /* Productos */
@@ -112,7 +208,7 @@ header{
     margin-left: 15%;
     margin-bottom: 3%;
     margin-right: 15%;
-    gap: 60px;
+    gap: 20px;
 }
 
 img{
@@ -127,37 +223,48 @@ img{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
-.producto img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    transition: all .5s;
-}
-
-.producto figure{
+.producto figure {
     overflow: hidden;
+    border-radius: 10px; 
+    margin: 0; 
+    display: flex;
+}
+  
+.producto figure img {
+    flex: 1; 
+    object-fit: cover;
+    border-radius: 10px; 
+    transition: transform 0.5s; 
 }
 
 .producto:hover img{
     transform: scale(1.2);
 }
 
-.texto_variable{
-    margin: 30px;
-    text-align: right;
-    margin-right: 50px;
+.producto h3{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
+.izquierda {
+    float: left; 
+}
+  
+.derecha {
+    float: right;
+}
+
+
 @media (max-width: 768px) {
-    .productos {
+    .contenedor-productos {
       grid-template-columns: repeat(2, 1fr);
     }
-  }
+}
   
-  @media (max-width: 480px) {
-    .productos {
+@media (max-width: 480px) {
+    .contenedor-productos {
       grid-template-columns: 1fr;
     }
-  }
+}
   
