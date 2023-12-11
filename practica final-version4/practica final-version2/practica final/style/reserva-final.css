@@ -1,0 +1,77 @@
+:root{
+    --color-fondo3: #ca787333;
+    --color-fondo2: #EEB8B5;
+    --color-fondo1: #ca7873cc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #ffffff;
+    color: #000;
+    min-width: 500px;
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 200px;
+}
+/*Header*/
+header{
+    background-color: var(--color-fondo2);
+    height: 120px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+#logo{
+    height: 120px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    margin-right: 30px;
+}
+.menu a{
+    color: #000;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: #ffffff;
+}
+#menu{
+    margin: 10px;
+}
+/*CONTENEDOR PRINCIPAL*/
+.contenedor-principal{
+    text-align: center;
+    background-image: url(../imagenes/saludable\ 1.png);
+    background-size: cover;
+    padding: 120px;
+    padding-bottom: 180px;
+    color: #ffffff;
+}
+.contenedor-principal h2{
+    font-size: 40px;
+    margin: 0;
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
+}
+.datos-reserva p{
+    font-size: 18px;
+}
+.contenedor-principal button{
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px;
+    font-size: 15px;
+}
+.contenedor-principal button:hover{
+    transform: scale(1.05,1.05);
+    background-color: var(--color-fondo2);
+    color: #ffffff;
+}
+.contenedor-principal button:active{
+    color: #000;
+}
