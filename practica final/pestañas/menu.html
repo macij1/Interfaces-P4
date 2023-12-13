@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="../style/menu.css" />
+    <script src="../script/menu.js"></script>
+    <script src="../script/funciones-comunes.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img id="logo" src="../imagenes/Imagen_logo2.png" alt="logo" />
+      </div>
+      <div class="menu">
+        <a href="../pagina-inicio.html">
+          <p id="menu">Inicio</p>
+        </a>
+        <a href="menu.html">
+          <p id="menu">Menu</p>
+        </a>
+        <a href="reservar.html">
+          <p id="menu">Reservar</p>
+        </a>
+        <a href="historia.html">
+          <p id="menu">Sobre nosotros</p>
+        </a>
+        <a href="../pagina-inicio.html#ubicaciones">
+          <p id="menu">Ubicaciones</p>
+        </a>
+        <img class="theme-icon" src="../imagenes/icons8-color-30.png" alt="GIF animado" onclick="changeTheme()">
+      </div>
+    </header>
+    <div class="barra_superior">
+      <div class="cesta-icono">
+        <img
+          src="../imagenes/bolso.png"
+          width="50"
+          alt="Cesta compra"
+          id="cestaIcono"
+        />
+      </div>
+
+      <div id="cestaDesplegable" class="desplegable">
+        <div class="parte_superior">
+          <div class="texto_variable">0 productos</div>
+          <img src="../imagenes/x.png" width="20" alt="Cruz" id="CruzCesta" />
+        </div>
+
+        <div class="productos-cesta">
+          <div class="ficha-producto-0" id="ficha-producto-0">
+            <h3>No hay productos en la cesta</h3>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-1"
+          >
+            <div class="imagen">
+              <img src="../imagenes/compartir2.jpeg" alt="Dim Sum" />
+            </div>
+            <div class="nombre-precio">
+              <h4>California Roll</h4>
+              <p>15€</p>
+            </div>
+            <div class="suma" id="suma1">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-1">1</p>
+            </div>
+            <div class="resta" id="resta1">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-2"
+          >
+            <div class="imagen">
+              <img src="../imagenes/makki2.jpeg" alt="Kushiague Roll" />
+            </div>
+            <div class="nombre-precio">
+              <h4>Kushiague Roll</h4>
+              <p>15€</p>
+            </div>
+            <div class="suma" id="suma2">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-2">1</p>
+            </div>
+            <div class="resta" id="resta2">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-3"
+          >
+            <div class="imagen">
+              <img src="../imagenes/compartir2.jpeg" alt="Dim Sum" />
+            </div>
+            <div class="nombre-precio">
+              <h4>Dim Sum</h4>
+              <p>9€</p>
+            </div>
+            <div class="suma" id="suma3">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-3">1</p>
+            </div>
+            <div class="resta" id="resta3">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-4"
+          >
+            <div class="imagen">
+              <img src="../imagenes/compartir1.jpeg" alt="Samosas de pollo" />
+            </div>
+            <div class="nombre-precio">
+              <h4 style="font-size: smaller">Samosas de pollo</h4>
+              <p>9€</p>
+            </div>
+            <div class="suma" id="suma4">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-4">1</p>
+            </div>
+            <div class="resta" id="resta4">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-5"
+          >
+            <div class="imagen">
+              <img src="../imagenes/especialidad1.jpeg" alt="Tataki de atún" />
+            </div>
+            <div class="nombre-precio">
+              <h4>Tataki de atún</h4>
+              <p>14€</p>
+            </div>
+            <div class="suma" id="suma5">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-5">1</p>
+            </div>
+            <div class="resta" id="resta5">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-6"
+          >
+            <div class="imagen">
+              <img
+                src="../imagenes/especialidad3.jpeg"
+                alt="Tataki de Solomillo"
+              />
+            </div>
+            <div class="nombre-precio">
+              <h4 style="font-size: smaller">Tataki de Solomillo</h4>
+              <p>13€</p>
+            </div>
+            <div class="suma" id="suma6">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-6">1</p>
+            </div>
+            <div class="resta" id="resta6">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-7"
+          >
+            <div class="imagen">
+              <img src="../imagenes/compartir3.jpeg" alt="Croquetas de atun" />
+            </div>
+            <div class="nombre-precio">
+              <h4 style="font-size: smaller">Croquetas de atun</h4>
+              <p>10€</p>
+            </div>
+            <div class="suma" id="suma7">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-7">1</p>
+            </div>
+            <div class="resta" id="resta7">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-8"
+          >
+            <div class="imagen">
+              <img
+                src="../imagenes/compartir4.jpeg"
+                alt="Croquetas carabineros"
+              />
+            </div>
+            <div class="nombre-precio">
+              <h4 style="font-size: 11px">Croquetas carabineros</h4>
+              <p>10€</p>
+            </div>
+            <div class="suma" id="suma8">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-8">1</p>
+            </div>
+            <div class="resta" id="resta8">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-9"
+          >
+            <div class="imagen">
+              <img src="../imagenes/makki3.jpeg" alt="Carolina Roll" />
+            </div>
+            <div class="nombre-precio">
+              <h4>Carolina Roll</h4>
+              <p>15€</p>
+            </div>
+            <div class="suma" id="suma9">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-9">1</p>
+            </div>
+            <div class="resta" id="resta9">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-10"
+          >
+            <div class="imagen">
+              <img src="../imagenes/makki4.jpeg" alt="Temnpura" Unagi />
+            </div>
+            <div class="nombre-precio">
+              <h4 style="font-size: smaller">Temnpura Unagi</h4>
+              <p>15€</p>
+            </div>
+            <div class="suma" id="suma10">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-10">1</p>
+            </div>
+            <div class="resta" id="resta10">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-11"
+          >
+            <div class="imagen">
+              <img src="../imagenes/nigiri3.jpeg" alt="Niguiri de Foie" />
+            </div>
+            <div class="nombre-precio">
+              <h4>Niguiri de Foie</h4>
+              <p>13€</p>
+            </div>
+            <div class="suma" id="suma11">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-11">1</p>
+            </div>
+            <div class="resta" id="resta11">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+
+          <div
+            class="ficha-producto"
+            style="display: none"
+            id="ficha-producto-12"
+          >
+            <div class="imagen">
+              <img src="../imagenes/tartar2.jpeg" alt="Tartar de Atún" />
+            </div>
+            <div class="nombre-precio">
+              <h4>Tartar de Atún</h4>
+              <p>18€</p>
+            </div>
+            <div class="suma" id="suma12">
+              <img src="../imagenes/mas.png" alt="mas" width="15" height="15" />
+            </div>
+            <div class="cantidad">
+              <p id="cantidad-producto-12">1</p>
+            </div>
+            <div class="resta" id="resta12">
+              <img
+                src="../imagenes/menos.png"
+                alt="menos"
+                width="10"
+                height="10"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="parte_inferior">
+          <div class="total">
+            <span class="izquierda">Total:</span>
+            <span class="derecha" id="precio_total">0€</span>
+          </div>
+          <div class="botones">
+            <button class="boton1" onclick="VerBolsa()">Ver bolsa</button>
+            <button class="boton2" onclick="Boton2()">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="barra_platos">
+      <p>Platos(12)</p>
+      <hr />
+    </div>
+
+    <div class="contenedor-productos">
+      <div class="producto">
+        <figure>
+          <img src="" alt="California Roll" />
+        </figure>
+        <h3>
+          <span class="izquierda">California Roll</span>
+          <span class="derecha">15€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton1">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Kushiague" />
+        </figure>
+        <h3>
+          <span class="izquierda">Kushiague Roll</span>
+          <span class="derecha">15€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton2">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="../imagenes/compartir2.jpeg" alt="Dim Sum" />
+        </figure>
+        <h3>
+          <span class="izquierda">Dim Sum</span>
+          <span class="derecha">9€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton3">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Samosas" />
+        </figure>
+        <h3>
+          <span class="izquierda">Samosas de pollo</span>
+          <span class="derecha">9€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton4">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="../imagenes/especialidad1.jpeg" alt="Tataki atun" />
+        </figure>
+        <h3>
+          <span class="izquierda">Tataki de atún</span>
+          <span class="derecha">14€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton5">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Tataki de Solomillo" />
+        </figure>
+        <h3>
+          <span class="izquierda">Tataki de Solomillo</span>
+          <span class="derecha">13€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton6">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Croquetas atun" />
+        </figure>
+        <h3>
+          <span class="izquierda">Croquetas de atun</span>
+          <span class="derecha">10€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton7">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Croquetas carabineros" />
+        </figure>
+        <h3>
+          <span class="izquierda">Croquetas carabineros</span>
+          <span class="derecha">10€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton8">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Carolina Roll" />
+        </figure>
+        <h3>
+          <span class="izquierda">Carolina Roll</span>
+          <span class="derecha">15€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton9">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Unagi" />
+        </figure>
+        <h3>
+          <span class="izquierda">Temnpura Unagi</span>
+          <span class="derecha">15€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton10">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Niguiri" />
+        </figure>
+        <h3>
+          <span class="izquierda">Niguiri de Foie</span>
+          <span class="derecha">13€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton11">Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <figure>
+          <img src="" alt="Tartar" />
+        </figure>
+        <h3>
+          <span class="izquierda">Tartar de Atún</span>
+          <span class="derecha">18€</span>
+        </h3>
+        <br style="clear: both" />
+        <button id="boton12">Agregar al carrito</button>
+      </div>
+    </div>
+  </body>
+</html>
