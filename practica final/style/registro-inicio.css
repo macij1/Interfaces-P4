@@ -1,0 +1,41 @@
+@import "estilos-comun.css";
+
+.contenedor-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../imagenes/saludable\ 1.png");
+}
+.contenedor-registro{
+    background-color: var(--color-footer);
+    border: 2px solid var(--color-borde);
+    border-radius: 10px;
+    width: 600px;
+    padding: 20px;
+}
+
+/*formulario*/
+input {
+    width: 400px;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background-color: var(--color-texto2);
+    border-radius: 5px;
+    border: 2px;
+}
+.campo{
+    margin: 20px;
+}
+#titulo-form{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a{
+    color: var(--color-texto1);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--color-fondo1);
+}

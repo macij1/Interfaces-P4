@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina inicio</title>
+    <link rel="stylesheet" href="style/pagina-inicio.css" >
+    <script src="script/pagina-inicio.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script/funciones-comunes.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img id="logo" src="imagenes/Imagen_logo2.png" alt="logo">
+        </div>
+        <div class="menu">
+            <a href="pestañas/menu.html">
+                <p id="menu">Menu</p>
+            </a>
+            <a href="pestañas/reservar.html">
+                <p id="menu">Reservar</p>
+            </a>
+            <a href="pestañas/historia.html">
+                <p id="menu">Sobre nosotros</p>
+            </a>
+            <a href="#ubicaciones">
+                <p id="menu">Ubicaciones</p>
+            </a>
+            <a href="pestañas/inicio-sesion.html">
+                <p id="menu">Inicio sesion</p>
+            </a>
+            <img class="theme-icon" src="imagenes/icons8-color-30.png" alt="GIF animado" onclick="changeTheme()">
+        </div>
+    </header>
+    <div class="contenedor-principal">
+        <div class="contenedor-inicio">
+            <h2 id="texto-inicio">El restaurante de sushi mejor<br>valorado de Madrid.</h2>
+            <div class="botones">
+                <a href="pestañas/menu.html">
+                    <button class="boton">Ver carta</button>
+                </a>
+                <a href="#ubicaciones">
+                    <button class="boton">Ver ubicaciones</button>
+                </a>
+            </div>
+        </div>
+        <div class="contenedor-productos">
+            <div class="contendor-auxiliar">
+                <h2 id="texto-productos">Prueba nuestras mejores piezas desde casa</h2>
+                <div class="carrouseles">
+                    <div class="carrousel1">
+                        <div class="grande1">
+                            <img src="imagenes/compartir2.jpeg" alt="Imagen 1" class="img">
+                            <img src="imagenes/especialidad1.jpeg" alt="Imagen 2" class="img">
+                            <img src="imagenes/especialidad2.jpeg" alt="Imagen 3" class="img">
+                        </div>
+                        <ul class="puntos">
+                            <li class="punto1">
+                                <img src="imagenes/flecha-calendario_izquierda.png" alt="flecha_dcha">
+                            </li>
+                            <li class="punto1">
+                                <img src="imagenes/flecha-calendario_derecha.png" alt="flecha_izqda">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="carrousel2">
+                        <div class="grande2">
+                            <img src="imagenes/makki4.jpeg" alt="Imagen 1" class="img">
+                            <img src="imagenes/makki2.jpeg" alt="Imagen 2" class="img">
+                            <img src="imagenes/nigiri3.jpeg" alt="Imagen 3" class="img">
+                        </div>
+                        <ul class="puntos">
+                            <li class="punto2">
+                                <img src="imagenes/flecha-calendario_izquierda.png" alt="flecha_dcha">
+                            </li>
+                            <li class="punto2">
+                                <img src="imagenes/flecha-calendario_derecha.png" alt="flecha_izqda">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-historia">
+            <div id="historia">
+                <h2>NUESTRA HISTORIA</h2>
+                <p>Hablamos con Sandra Segimón, la presidenta del Grupo Sushita que trajo el sushi a España hace 23 años
+                    «Hace tantos años que impresiona, pero seguimos con la misma ilusión», confiesa Sandra Segimón a COOL cuando le preguntamos por el origen de la empresa. Seis restaurantes -y el séptimo en camino- de cocina japonesa fusión -todos diferentes- en Madrid, una línea de venta de sushi a domicilio «en bandejitas» y una colección de vajillas pintadas a mano en colaboración con Eugenia Martínez de Irujo son las tres líneas de negocio del grupo empresarial que preside. «Fuimos los primeros en España en vender bandejitas y en 2015 abrimos nuestro primer restaurante Café Sushita».
+                    Sandra Segimón comenzó esta aventura en 1999 con su hermano José Manuel y su socia Natacha Apolinario. Hoy en día, están a punto de inaugurar un nuevo restaurante en La Moraleja, Madrid. «Cada restaurante cuenta una historia diferente y queremos que el cliente cuando nos visita se sienta como en su propia casa».</p>
+                <a href="pestañas/historia.html">
+                    <button class="boton">Seguir leyendo</button>
+                </a>
+            </div>
+            <div id="img-historia">
+                <img src="imagenes/prensa2.jpg" alt="imagen prensa">
+            </div>
+        </div>
+        <div class="contenedor-ubicaciones" id="ubicaciones">
+            <h2>Ubicaciones</h2>
+            <div class="mapas-ubi">
+                <div class="mapa">
+                    <p>Localización General Diaz Porlier</p>
+                    <div id="mapa1"></div>
+                    <p>Calle General Diaz Porlier 11, 28013 Madrid</p>
+                    <p>+34 123 456 789</p>
+                    <button class="boton">Reservar ahora</button>
+                </div>
+                <div class="mapa">
+                    <p>Localización Olvido</p>
+                    <div id="mapa2"></div>
+                    <p>Calle del Olvido, 10, 28026 Madrid</p>
+                    <p>+34 123 456 789</p>
+                    <button class="boton" >Reservar ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cookies-button" onclick="mostrarFooter()">
+        <h3 class="cookies-title">COOKIES</h3>
+      </div>
+      <footer class="footer">
+        <div class="footer-content">
+          <h3 class="footer-title">
+            Utilizamos cookies propias y de terceros para mejorar nuestros
+            servicios y mostrarte publicidad relacionada con tus preferencias
+            mediante el análisis de tus hábitos de navegación.
+          </h3>
+          <div class="footer-buttons">
+            <button class="footer-button" onclick="ocultarFooter()">
+              Aceptar
+            </button>
+            <button class="footer-button" onclick="ocultarFooter()">
+              Rechazar
+            </button>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+@import "estilos-comun.css";
+
+/* Fichas productos */
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 30px;
+}
+
+.container-fichas{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #ccc;
+    width: 40%;
+    min-width: 854px;
+}
+.ficha-producto {
+    display: flex;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+  
+.ficha-producto .imagen img{
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+  
+.ficha-producto h4 {
+    margin: 10px 10px;
+}
+
+.ficha-producto .nombre-precio{
+    width: 135px;
+}
+
+.ficha-producto .nombre-precio p {
+    margin: 10px  10px;
+}
+
+.ficha-producto .cantidad  {
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.ficha-producto .cantidad p {
+    margin-right: 6px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
+
+.titulo{
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo img{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.parte_inferior {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0; 
+    border-top: 1px solid #ccc;
+    height: 68px; 
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.total {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.izquierda {
+    float: left; 
+    margin-left: 28%;
+    font-weight: bold;
+    font-size: larger;
+}
+  
+.derecha {
+    float: right;
+    margin-right: 28%;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.botones{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+}
+
+.botones button{
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px;
+    border-width: 0.5px;
+    font-size: 18px;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+.boton1{
+    margin-right: 10px;
+}
+.boton2{
+    margin-left: 40px;
+    background-color: #3170a4;
+    color: white;
+}
+
+.boton2:hover{
+    background-color: #275984;
+}
+.boton1:hover{
+    background-color: #bababa;
+}
+
+@media screen and (max-width: 768px) {
+    .container-fichas {
+      width: 80%; 
+    }
+  
+    .ficha-producto {
+      flex-direction: column; 
+    }
+  
+    .ficha-producto .imagen img {
+      width: 50%; 
+      height: auto;
+    }
+  
+    .ficha-producto .nombre-precio,
+    .ficha-producto .cantidad {
+      width: 100%;
+    }
+
+  }
+
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio sesion</title>
+    <link rel="stylesheet" href="../style/registro-inicio.css">
+    <script src="../script/inicio-sesion.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img id="logo" src="../imagenes/Imagen_logo2.png" alt="logo" onclick="goInicio()">
+        </div>
+        <div class="menu">
+            <a href="pestañas/menu.html">
+                <p id="menu">Menu</p>
+            </a>
+            <a href="pestañas/reservar.html">
+                <p id="menu">Reservar</p>
+            </a>
+            <a href="pestañas/historia.html">
+                <p id="menu">Sobre nosotros</p>
+            </a>
+            <a href="#ubicaciones">
+                <p id="menu">Ubicaciones</p>
+            </a>
+            <a href="#">
+                <p id="menu">Inicio sesion</p>
+            </a>
+            <img class="theme-icon" src="../imagenes/icons8-color-30.png" alt="GIF animado" onclick="changeTheme()">
+        </div>
+    </header>
+    <div class="contenedor-principal">
+        <div id="inicio-sesion" class="contenedor-registro">
+            <p id="titulo-form">Registrarse</p>
+            <form id="formulario-inicio-sesion" class="formulario" action="../pagina-inicio.html" onsubmit="submitLoginForm(event)" method="post">
+                <label for="userNameLogin">Nombre de usuario</label>
+                <input type="text" id="userNameLogin" name="userNameLogin" placeholder="Nombre de usuario" required>
+                <br>
+                <label for="passwordLogin">Contraseña</label>
+                <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Contraseña" required>
+                <br>
+                <div>
+                    <button class="boton">Iniciar sesion</button>
+                    <a href="registro.html">Aun no estoy resegistrado</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
