@@ -1,0 +1,55 @@
+@import "estilos-comun.css";
+
+h3,
+p{
+    display: flex;
+    justify-content: start;
+    margin-left: 50px;
+    margin-top: 0;
+}
+.contenedor-principal {
+    text-align: center;
+    background-color: var(--color-fondo3);
+    padding-top: 50px;
+}
+.contenedor-mesas{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.imagen-mesas {
+    position: absolute;
+    background-image: url("../imagenes/mesas.png");
+    width: 484px;
+    height: 383px;
+}
+
+.imagen-mesas img {
+    position: absolute;
+}
+
+#mesa1 {
+    top: 210px; 
+    left: 132px;
+}
+#mesa2 {
+    top: 251px;
+    left: 205px;
+}
+#mesa3 {
+    top: 147px;
+    left: 236px;
+}
+#mesa3:hover,
+#mesa2:hover,
+#mesa1:hover{
+    transform: scale(1.07, 1.07);
+}
+
+.boton{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+}
