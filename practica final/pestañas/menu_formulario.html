@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
-    <link rel="stylesheet" href="../style/menu_formulario.css" />
-    <script src="../script/menu_formulario.js"></script>
-    <script src="../script/funciones-comunes.js"></script>
+    <title>Reserva</title>
+    <link rel="stylesheet" href="../style/reserva-datos.css" />
   </head>
   <body>
     <header>
       <div>
-        <img id="logo" src="../imagenes/Imagen_logo2.png" alt="logo" onclick="goInicio()"/>
+        <img
+          id="logo"
+          src="../imagenes/Imagen_logo2.png"
+          alt="logo"
+          onclick="goInicio()"
+        />
       </div>
       <div class="menu">
+        <a href="../pagina-inicio.html">
+          <p id="menu">Inicio</p>
+        </a>
         <a href="menu.html">
           <p id="menu">Menu</p>
         </a>
@@ -26,62 +32,85 @@
         <a href="../pagina-inicio.html#ubicaciones">
           <p id="menu">Ubicaciones</p>
         </a>
-        <a  href="../pestañas/inicio-sesion.html">
+        <a href="../pestañas/inicio-sesion.html">
           <p id="menu">Inicio sesion</p>
         </a>
-        <img class="theme-icon" src="../imagenes/icons8-color-30.png" alt="GIF animado" onclick="changeTheme()">
+        <img
+          class="theme-icon"
+          src="../imagenes/icons8-color-30.png"
+          alt="GIF animado"
+          onclick="changeTheme()"
+        />
       </div>
     </header>
-    <div class="contenedor-principal">
-      <h2>Rellene los datos para su compra</h2>
-      <form id="formulario" class="formulario">
-        <div class="campo">
-          <label for="nombre">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            required
-            pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
-            title="Introduce un nombre válido"
-            onchange="validarNombre()"
-          /><br />
-        </div>
-        <div class="campo">
-          <label for="apellido">Apellido:</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            required
-            pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
-            title="Introduce un nombre válido"
-            onchange="validarNombre()"
-          /><br />
-        </div>
-        <div class="campo">
-          <label for="telefono">Teléfono:</label>
-          <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            required
-            pattern="[0-9]{9}"
-            onchange="validarTelefono()"
-          /><br />
-        </div>
-        <div class="campo">
-          <label for="correo">Correo Electrónico:</label>
-          <input
-            type="email"
-            id="correo"
-            name="correo"
-            required
-            onchange="validarCorreo()"
-          /><br />
-        </div>
-        <button>pagar</button>
+    <div class="contenedor-principal" id="contenedor-reserva">
+      <h2>Rellene los datos para la compra</h2>
+      <!--AÑADIR METODO POST-->
+      <form
+        id="formulario"
+        class="formulario"
+        action="reservar-final.html"
+        method="post"
+      >
+        <label for="name">Nombre</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Por favor escriba su nombre"
+          pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+"
+          title="Solo se permiten letras"
+          oninput="validarNombre()"
+          required
+        />
+        <br />
+        <label for="surname">Apellido(s)</label>
+        <input
+          type="text"
+          id="surname"
+          name="surname"
+          placeholder="Por favor escriba su apellido(s)"
+          pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+"
+          title="Solo se permiten letras"
+          oninput="validarApellido()"
+          required
+        />
+        <br />
+        <label for="phone">Teléfono</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone_number"
+          placeholder="Por favor escriba su número de teléfono"
+          pattern="[0-9]{9}"
+          title="Debe tener 9 dígitos numéricos"
+          oninput="validarTelefono()"
+        />
+        <br />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Por favor escriba su email"
+          title="Por favor ingrese un email válido"
+          oninput="validarCorreo()"
+        />
+        <br />
+        <label for="tarjeta">Tarjeta Bancaria</label>
+        <input
+          type="tarjeta"
+          id="tarjeta"
+          name="tarjeta"
+          placeholder="Por favor escriba su tarjeta bancaria"
+          title="Por favor ingrese una tarjeta válida"
+          oninput="validarTarjeta()"
+        />
+        <br />
+        <button class="boton">Realizar pago</button>
       </form>
     </div>
+    <script src="../script/menu_formulario.js"></script>
+    <script src="../script/funciones-comunes.js"></script>
   </body>
 </html>

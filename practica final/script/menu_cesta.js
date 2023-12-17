@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   ficha_total.innerHTML = `
   <div class="total">
     <span class="izquierda">Total:</span>
-    <span class="derecha">${precioGuardado}</span>
+    <span class="derecha" id="precio">${precioGuardado}</span>
   </div>`;
 
   containerFichas.appendChild(ficha_total);
@@ -61,8 +61,12 @@ function validarCupon(event) {
   if (descuento == undefined) {
       document.getElementById('mensaje-validacion').textContent = 'Cupón no válido';
   } else {
-    document.getElementById('mensaje-validacion').textContent = 'Cupón correcto, descuento del '.concat(descuento.toString()).concat("% aplicado")
-    // MODIFICAR EL PRECIO
+      document.getElementById('mensaje-validacion').textContent = 'Cupón correcto, descuento del '.concat(descuento.toString()).concat("% aplicado")
+      let precio=document.getElementById('precio')
+      let precio_numero= parseInt(precio.textContent)
+      let precio_descuento= precio_numero-(precio_numero*descuento/100)
+      precio.textContent= precio_descuento+ " €"
+      cupones_aplicados+=1;
   }
 }
 

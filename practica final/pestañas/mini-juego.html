@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Juego</title>
-    <link rel="stylesheet" href="../style/mini-juego.css">
+    <link rel="stylesheet" href="../style/mini-juego.css" />
     <script src="../script/reserva.js"></script>
     <script src="../script/mini-juego.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div>
-          <img id="logo" src="../imagenes/Imagen_logo2.png" alt="logo" onclick="goInicio()"/>
-        </div>
-        <div class="menu">
-          <a href="menu.html">
-            <p id="menu">Menu</p>
-          </a>
-          <a href="reservar.html">
-            <p id="menu">Reservar</p>
-          </a>
-          <a href="historia.html">
-            <p id="menu">Sobre nosotros</p>
-          </a>
-          <a href="../pagina-inicio.html#ubicaciones">
-            <p id="menu">Ubicaciones</p>
-          </a>
-          <a  href="../pestañas/inicio-sesion.html">
-            <p id="menu">Inicio sesion</p>
-          </a>
-          <img class="theme-icon" src="../imagenes/icons8-color-30.png" alt="GIF animado" onclick="changeTheme()">
-        </div>
+      <div>
+        <img
+          id="logo"
+          src="../imagenes/Imagen_logo2.png"
+          alt="logo"
+          onclick="goInicio()"
+        />
+      </div>
+      <div class="menu">
+        <a href="../pagina-inicio.html">
+          <p id="menu">Inicio</p>
+        </a>
+        <a href="menu.html">
+          <p id="menu">Menu</p>
+        </a>
+        <a href="reservar.html">
+          <p id="menu">Reservar</p>
+        </a>
+        <a href="historia.html">
+          <p id="menu">Sobre nosotros</p>
+        </a>
+        <a href="../pagina-inicio.html#ubicaciones">
+          <p id="menu">Ubicaciones</p>
+        </a>
+        <a href="../pestañas/inicio-sesion.html">
+          <p id="menu">Inicio sesion</p>
+        </a>
+        <img
+          class="theme-icon"
+          src="../imagenes/icons8-color-30.png"
+          alt="GIF animado"
+          onclick="changeTheme()"
+        />
+      </div>
     </header>
     <div class="contenedor-principal">
-        <h3 id="titulo">Para conseguir un cupon extra, consigue todas las piezas de sushi antes de que se agote el tiempo</h3>
-        <div id="contenendor-juego">
-          <div id="game-board"></div>
-          <div id="timer">Tiempo restante: <span id="timer-countdown"></span></div>
+      <h3 id="titulo">
+        Para conseguir un cupon extra, consigue todas las piezas de sushi antes
+        de que se agote el tiempo
+      </h3>
+      <div id="contenendor-juego">
+        <div id="game-board"></div>
+        <div id="timer">
+          Tiempo restante: <span id="timer-countdown"></span>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

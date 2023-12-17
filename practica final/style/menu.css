@@ -162,6 +162,11 @@
     height: auto;
     border-radius: 5px;
 }
+
+.ficha-producto .imagen img {
+    max-height: 60px;
+    min-width: 80px;
+}
   
 .ficha-producto h4 {
     margin: 10px 10px;
@@ -226,6 +231,7 @@ img{
     border-radius: 10px; 
     margin: 0; 
     display: flex;
+    height: 210px;
 }
   
 .producto figure img {
